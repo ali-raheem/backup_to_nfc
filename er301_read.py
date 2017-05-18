@@ -2,7 +2,7 @@
 from yhy523u import YHY523U
 
 if __name__ == '__main__':
-    nfc = ER301('COM5', 115200)
+    nfc = YHY523U('COM5', 115200)
     nfc.select()
     i = 0
     outdata = ''

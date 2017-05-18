@@ -1,4 +1,4 @@
-# Quick and Dirty data to Mifare 1K V0.1.0
+# Quick and Dirty data to Mifare 1K V0.1.1
 
 Simply takes a file (<= 720 bytes) and writes it to a mifare 1k file using the ER301 interface.
 
@@ -23,6 +23,7 @@ $ diff -s datafile outfile
 
 ### Changelog
 
+* 2017/05/18 - Added readfile
 * 2017/05/18 - Initial commit
 
 ### Todo
