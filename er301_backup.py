@@ -20,13 +20,16 @@ if __name__ == '__main__':
     datafile = open('datafile', 'rb')
     data = datafile.read()
     datafile.close()
-    padding = 720 - len(data)
+    filelength = len(data)
+    padding = 720 - filelength
     if(0 > padding):
         print "Error split data at 720 bytes"
         exit()
+    print "Attempting to write file to mifare 1k (",filelength,"bytes)."
     data += '\x00'*padding
     nfc = ER301('COM5', 115200)
     nfc.select()
+   # nfc.write_block(0, '\xFF'*6, 1, hex(len(data))+'\x00'*14)
     nfc.write_data(data)
     #nfc.dump()
     i = 0
