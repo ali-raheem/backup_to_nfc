@@ -44,3 +44,5 @@ finalfile should be identical to datafile.
 * Add meta data to first sector 32 bytes.
   * 2 bytes padding
   * 30 bytes unallocated? Description etc?
+* Ability to lock data so can't be overwritten
+* Not just assume key is '0xff'*6
