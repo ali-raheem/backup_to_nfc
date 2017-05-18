@@ -24,7 +24,7 @@ if __name__ == '__main__':
     if(0 > padding):
         print "Error split data at 720 bytes"
         exit()
-    data += '\x24'*padding
+    data += '\x00'*padding
     nfc = ER301('COM5', 115200)
     nfc.select()
     nfc.write_data(data)
